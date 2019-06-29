@@ -1,4 +1,4 @@
-{% set version = '1.2-8' %}
+{% set version = '1.2-9' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,23 +7,22 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: kSamples_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/kSamples_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kSamples/kSamples_{{ version }}.tar.gz
-  sha256: d9fd5cd6873b331d0f880ffdb674c1b322c66f6fb2cb59662e9d937b77c1a595
+  sha256: ba3ec4af3dfcf7cf12f0b784ef67bfea565e16985647ead904629886cc1542ff
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -56,23 +55,18 @@ about:
     bounds for shift parameters.  A plotting function compares tail probabilities obtained
     under asymptotic approximation with those obtained via simulation or exact  calculations.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
     - apcamargo
 
 # Package: kSamples
 # Type: Package
 # Title: K-Sample Rank Tests and their Combinations
-# Version: 1.2-8
-# Date: 2018-06-02
+# Version: 1.2-9
+# Date: 2019-05-20
 # Authors@R: c(person("Fritz", "Scholz",role=c("aut","cre"),email = "fscholz@u.washington.edu"), person("Angie", "Zhu", role=c("aut"), email= "a.zhu.stat@gmail.com"))
 # Author: Fritz Scholz [aut, cre], Angie Zhu [aut]
 # Maintainer: Fritz Scholz <fscholz@u.washington.edu>
@@ -82,6 +76,6 @@ extra:
 # License: GPL (>= 2)
 # LazyLoad: yes
 # NeedsCompilation: yes
-# Packaged: 2018-06-02 23:43:58 UTC; fritz
+# Packaged: 2019-05-20 21:03:07 UTC; fritz
 # Repository: CRAN
-# Date/Publication: 2018-06-03 14:29:24 UTC
+# Date/Publication: 2019-05-20 21:50:03 UTC
