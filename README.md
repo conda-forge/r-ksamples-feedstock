@@ -3,7 +3,7 @@ About r-ksamples
 
 Home: https://CRAN.R-project.org/package=kSamples
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ksamples-feedstock/blob/main/LICENSE.txt)
 
