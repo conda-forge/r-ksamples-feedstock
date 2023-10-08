@@ -3,6 +3,7 @@ About r-ksamples-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ksamples-feedstock/blob/main/LICENSE.txt)
 
+
 About r-ksamples
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=kSamples
 Package license: GPL-2.0-or-later
 
 Summary: Compares k samples using the Anderson-Darling test, Kruskal-Wallis type tests  with different rank score criteria, Steel's multiple comparison test, and the  Jonckheere-Terpstra (JT) test. It computes asymptotic, simulated or (limited) exact  P-values, all valid under randomization, with or without ties, or conditionally  under random sampling from populations, given the observed tie pattern.  Except for  Steel's test and the JT test it also combines these tests across several blocks of  samples.  Also analyzed are 2 x t contingency tables and their blocked combinations  using the Kruskal-Wallis criterion.  Steel's test is inverted to provide simultaneous  confidence bounds for shift parameters.  A plotting function compares tail probabilities obtained under asymptotic approximation with those obtained via simulation or exact  calculations.
+
 About r-ksamples
 ----------------
 
