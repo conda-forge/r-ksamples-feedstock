@@ -1,4 +1,4 @@
-{% set version = "1.2-10" %}
+{% set version = "1.2-12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kSamples_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kSamples/kSamples_{{ version }}.tar.gz
-  sha256: 2d66cc0511fb1be3190c5a285dcd93d02419468ee1ff5ae6d0838f16df2b578d
+  sha256: 629d2dca3d4bdeb6ab4e9fcd1793f89e04f050bcd8bbc06bb179a392d0409eb7
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
